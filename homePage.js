@@ -104,19 +104,17 @@ function add_user(){
     var req_mes = "first_name="+fname+"&last_name="+lname+"&password="+pword+"&username="+uname;
     
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("POST", "addUser.php", true);
     xmlHttp.onreadystatechange = function(){
         if(xmlHttp.readyState==4 && xmlHttp.status==200){
             var responseMessage = xmlHttp.responseText;
             document.getElementById("Response").innerHTML= responseMessage;
+            alert(responseMessage);
             view_users();
         }
     };
     
-    
-    xmlHttp.send(req_mes);
-    var responseMessage = xmlHttp.responseText;
-    alert(responseMessage);    
+    xmlHttp.open("POST", "addUser.php", true);
+    xmlHttp.send(req_mes);    
 }
     
     
