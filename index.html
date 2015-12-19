@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Cheapo Mail Login</title>
+    <link rel=stylesheet type="text/css" href="logIn.css">
+    <script type="text/javascript" src="logIn.js"></script>
+</head>
+<body>
+    <img class="logo" src="cmlogo.png"/>
+    <form id="logininfo" name="loginform" action="logIn.php" method="post"> 
+	<h1>User Login</h1>
+    <div id="input">
+        <label> User Name
+        <input type = "text"  name="uname" id="uname" size="15" />
+        </label>
+        <br /> <br />
+        <label> Password
+        <input type = "password" name="pword" id="pword" size="15" />
+        </label>
+        <br /> <br />
+        <input type= "submit" id="login" value= "Login" onclick= "verify();">  </input>
+    </div>
+ 
+    </form>
+    <div id= "login_status"> <?php echo $msg; ?> </div>
+</body>
+</html>
+
